@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 15, 23, 42;
+  --background-start-rgb: 248, 250, 252;
+  --background-end-rgb: 255, 255, 255;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* تحسين شكل المدخلات (Inputs) */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* تأثيرات التمرير الناعم */
+html {
+  scroll-behavior: smooth;
+}
+
+/* تخصيص ألوان الـ Selection */
+::selection {
+  background-color: #7c3aed;
+  color: white;
+}
+
+/* فئة مخصصة للخلفيات الزجاجية (Glassmorphism) */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* تصميم الأزرار الاحترافية */
+@layer components {
+  .btn-primary {
+    @apply bg-purple-700 text-white px-8 py-4 rounded-2xl font-bold transition-all duration-300 shadow-lg shadow-purple-200 hover:bg-purple-800 hover:shadow-purple-300 active:scale-95;
+  }
+}
