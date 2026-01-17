@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "../components/theme-provider";
-import { Toaster } from "@/components/ui/toaster"; // استيراد حاوية التنبيهات
+
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "PiTrust Oracle | Secure Escrow",
-  description: "Secure escrow service for Pi Network",
+  title: "PiTrust Oracle",
+  description: "Global Pi Network Oracle System",
 };
 
 export default function RootLayout({
@@ -14,13 +15,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className="antialiased font-sans">
-        <ThemeProvider>
-          {children}
-          {/* هذا المكون هو الذي سيظهر رسائل النجاح والنزاعات بشكل أنيق */}
-          <Toaster />
-        </ThemeProvider>
+    <html lang="en">
+      <body className={inter.className}>
+        {children}
       </body>
     </html>
   );
