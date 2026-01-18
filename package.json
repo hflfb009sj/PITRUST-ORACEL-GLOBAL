@@ -1,12 +1,13 @@
 {
   "name": "pitrust-oracel-global",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "install": "npm install --no-package-lock"
   },
   "dependencies": {
     "next": "15.1.7",
