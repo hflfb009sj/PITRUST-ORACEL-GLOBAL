@@ -1,6 +1,6 @@
 {
-  "name": "pitrust-oracle-global-stable",
-  "version": "1.9.0",
+  "name": "pitrust-oracle-global-safe",
+  "version": "2.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
