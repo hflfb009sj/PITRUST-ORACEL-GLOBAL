@@ -1,6 +1,6 @@
 {
-  "name": "pitrust-oracle-global",
-  "version": "2.2.0",
+  "name": "pi-trust-global-secure",
+  "version": "3.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
